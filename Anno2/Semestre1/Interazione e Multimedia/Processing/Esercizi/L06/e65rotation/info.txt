@@ -1,0 +1,11 @@
+//In matematica, e più precisamente in algebra lineare, 
+//una matrice ortogonale è una matrice invertibile 
+//la cui trasposta coincide con la sua inversa.
+
+//Le isometrie sono definite da matrici ortogonali.
+/*
+Puoi risparmiarti quei calcoli solo se hai la fortuna 
+di avere davanti una matrice ortogonale. Vuoi verificarlo? 
+Calcola il prodotto della matrice di partenza per la sua trasposta,
+se il risultato è la matrice identità, la matrice di partenza è ortogonale
+*/

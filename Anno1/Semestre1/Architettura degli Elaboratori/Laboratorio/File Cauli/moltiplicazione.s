@@ -1,0 +1,20 @@
+FAT1		DCD		5
+FAT2		DCD		7
+RIS		FILL		4
+		
+		MOV		R2, #FAT1
+		LDR		R2, [R2]
+		MOV		R3, #FAT2
+		LDR		R3, [R3]
+		MOV		R5, #RIS
+		MOV		R4, #0
+		
+CICLO		CMP		R3, #0
+		BEQ		FINE
+		SUB		R3, R3, #1
+		ADD		R4, R4, R2
+		B		CICLO
+		
+FINE		STR		R4, [R5]
+
+		END

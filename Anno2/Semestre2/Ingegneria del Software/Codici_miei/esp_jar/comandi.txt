@@ -1,0 +1,14 @@
+jar cvfe <nome_archivio>.jar <nome_main> <files>.class // crea un archivio eseguibile
+c spcifica di creare un archivio .jar
+v fa stampare sul terminale le robe che ha messo nell'archivio
+f permette di dare un nome all'archivio
+e permette di specificare il file del main
+
+java -jar <nome_archivio>.jar // fa partire il progetto
+
+// se non si mette la e nei parametri di jar e si vuole avviare l'archivio, allora:
+java -cp <nome_archivio>.jar <nome_main>
+
+javap <nome_classe>.class // ti recupera parte del codice sorgente
+
+javac e java lo sai a che servono, in caso guarda lezione1 dal GitHub di Ernesto l'Onesto

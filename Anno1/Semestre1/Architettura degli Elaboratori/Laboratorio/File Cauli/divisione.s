@@ -1,0 +1,23 @@
+DIVID		DCD		274
+DIVIS		DCD		13
+RIS		FILL		4
+REST		FILL		4
+		
+		MOV		R2, #DIVID
+		LDR		R2, [R2]
+		MOV		R3, #DIVIS
+		LDR		R3, [R3]
+		MOV		R5, #RIS
+		MOV		R6, #REST
+		MOV		R4, #0
+		
+CICLO		CMP		R2, R3
+		BLT		FINE
+		SUB		R2, R2, R3
+		ADD		R4, R4, #1
+		B		CICLO
+		
+FINE		STR		R4, [R5]
+		STR		R2, [R6]
+
+		END

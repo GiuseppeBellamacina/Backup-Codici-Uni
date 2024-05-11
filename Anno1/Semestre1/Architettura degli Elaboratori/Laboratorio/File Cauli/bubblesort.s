@@ -1,0 +1,29 @@
+NUMEL	DCD		10
+LISTA	DCD		1,3,7,3,-4,-5,1,10,3,6
+		
+		MOV		R2, #NUMEL
+		LDR		R2, [R2]
+		MOV		R3, #LISTA
+		MOV		R4, R2
+		MOV		R5, R3
+		
+		MOV		R6, #0
+		
+CICLO	LDR		R7, [R3]
+		LDR		R8, [R3, #4]
+		CMP		R7, R8
+		BLE		NEXTSTEP
+		ADD		R6, R6, #1
+		STR		R8, [R3]
+		STR		R7, [R3, #4]
+NEXTSTEP	ADD		R3, R3, #4
+		SUB		R2, R2, #1
+		CMP		R2, #1
+		BGT		CICLO
+RESET	MOV		R2, R4
+		MOV		R3, R5
+		CMP		R6, #0
+		MOV		R6, #0
+		BNE		CICLO
+		
+		END

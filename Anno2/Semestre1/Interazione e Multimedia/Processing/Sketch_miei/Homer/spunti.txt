@@ -1,0 +1,4 @@
+puoi fare la roba della ciambella che cade
+puoi usare lerp per rendere più fluida la transizione quando il mouse è al centro
+puoi mettere dietro uno sfondo di Homer
+puoi rimuovedere gli occhi allo sfondo di Homer

@@ -1,0 +1,25 @@
+ARR1		DCD		0,1,2,3,4
+ARR2		DCD		55,2,0,11,3
+DIM		DCD		5
+RIS		FILL		4
+		MOV		R0, #ARR1
+		MOV		R1, #ARR2
+		MOV		R2, #DIM
+		LDR		R2, [R2]
+		MOV		R3, #0
+CICLO	CMP		R2, #0
+		BEQ		FINEPS
+		LDR		R4, [R0], #4
+		LDR		R5, [R1], #4
+		MOV		R6, #0
+CICLOM	CMP		R5, #0
+		BEQ		FINEM
+		ADD		R6, R6, R4
+		SUB		R5, R5, #1
+		B		CICLOM
+FINEM	ADD		R3, R3, R6
+		SUB		R2, R2, #1
+		B		CICLO
+FINEPS	MOV		R5, #RIS
+		LDR		R3, [R5]
+		END

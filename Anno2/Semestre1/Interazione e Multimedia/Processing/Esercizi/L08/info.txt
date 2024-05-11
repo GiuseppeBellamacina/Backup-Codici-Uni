@@ -1,0 +1,6 @@
+1) Operatori locali di rango (mediano, massimo, minimo)
+2) Operatori locali invarianti per traslazione e lineari, applicati implementando la convoluzione.
+
+ATTENZIONE
+Differenza tra l'indicizzazione per gli oggetti PImage e quella per le matrici in Processing.
+In particolare le coordinate vanno invertite (I[i][j]==>I.get(j,i)).

@@ -1,0 +1,61 @@
+### DISCLAIMER ###
+Se mandate sto file a qualcuno (specialmente a Federica o a persone nane)
+vi elimino fisicamente in modo creativo.
+E giocate a Zelda, bastardi
+
+
+
+# Se siete coglioni ed entrare come utente normale
+su
+
+# Per cambiare nome all'host
+nano /etc/hostname
+
+# Per settare le schede di rete
+nano /etc/network/interfaces
+
+auto enp0s3[/8/9/10]
+iface enp0s3 inet static
+    address X.X.X.X/24
+    gateway X.X.X.X
+
+allow-hotplug enp0s3[/8/9/10]
+iface enp0s3[/8/9/10] inet dhcp
+
+# Per attivare il forwarding
+nano /etc/sysctl.conf
+decommenta questa riga: net.ipv4.ip_forward=1
+
+# Per attivare le schede di rete
+ip link set dev enp0s3[/8/9/10] up
+
+# Per immettere una route specifica (temporanea)
+ip route add X.X.X.X/24 via X.X.X.X
+
+# Per immettere una route specifica (permanente)
+nano /etc/network/interfaces
+up ip route add X.X.X.X/24 via X.X.X.X
+
+# Per riavviare
+reboot
+
+# Per riavviare le schede di rete
+/etc/init.d/networking restart
+
+# Per controllare le connessioni
+ip neigh -> per vedere i vicini
+ip route -> per vedere le route
+ping X.X.X.X -> per pingare un ip
+traceroute X.X.X.X -> per vedere il percorso di un pacchetto
+
+# Per fare le shortcut
+nano /bin/NOME_COMANDO
+scrivete il codice della shortcut e salvate
+chmod +x /bin/NOME_COMANDO
+
+# Per vedere lo stato di SSH
+systemctl status ssh
+(in caso apt-get install openssh-server)
+
+# Per fare altre robe
+LEGGETEVI IL CAZZO DI MANGA

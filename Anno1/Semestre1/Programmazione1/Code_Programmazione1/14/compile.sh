@@ -1,0 +1,10 @@
+g++ -Wall A14_01_ifstream.cpp -o A14_01_ifstream
+g++ -Wall A14_02_ifstream.cpp -o A14_02_ifstream
+g++ -Wall A14_03_ofstream.cpp -o A14_03_ofstream
+g++ -Wall A14_04_ofstream.cpp -o A14_04_ofstream
+g++ -Wall A14_05_fstream_write.cpp -o A14_05_fstream_write
+g++ -Wall A14_05_fstream_read_numbers_fromfile.cpp -o A14_05_fstream_read_numbers_fromfile
+g++ -Wall A14_06_fstream_write.cpp -o A14_06_fstream_write
+g++ -Wall A14_06_fstream_write_numbers_onfile.cpp -o A14_06_fstream_write_numbers_onfile
+g++ -Wall A14_07_fstream_read.cpp -o A14_07_fstream_read
+g++ -Wall A14_08_fstream_read.cpp -o A14_08_fstream_read
